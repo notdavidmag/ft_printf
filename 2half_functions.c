@@ -48,6 +48,8 @@ int	ft_putptr(unsigned long n)
 	int	count;
 
 	count = 0;
+	if (n == 0)
+		return (ft_putstr("0"));
 	if (n >= 16)
 		count += ft_putptr(n / 16);
 	if ((n % 16) < 10)
