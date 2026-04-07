@@ -6,15 +6,15 @@
 /*   By: damagda <<marvin@42.fr>>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 20:00:15 by damagda           #+#    #+#             */
-/*   Updated: 2026/03/27 20:25:56 by damagda          ###   ########.fr       */
+/*   Updated: 2026/04/07 18:48:03 by damagda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include "ft_printf.h"
+/*
+#include "ft_printf.h"
 #include <stdio.h>
 #include <limits.h>
- 
-/* Macro de comparación: imprime ambos resultados y el retorno 
+
 #define TEST(desc, fmt, ...) do { \
 	int r1, r2; \
 	printf("\n[TEST] %s\n", desc); \
@@ -29,7 +29,7 @@
 	else \
 		printf("  [FAIL] printf=%d ft_printf=%d\n", r2, r1); \
 } while (0)
- 
+
 int	main(void)
 {
 	char			c = 'A';
@@ -48,28 +48,25 @@ int	main(void)
 	unsigned int	x_max = UINT_MAX;
 	void			*ptr = str;
 	void			*null_ptr = NULL;
- 
+
 	printf("\n==============================\n");
 	printf("   PRUEBAS EXHAUSTIVAS FT_PRINTF\n");
 	printf("==============================\n");
- 
-	/* ---- %c ---- 
+
 	printf("\n--- %%c ---");
 	TEST("char normal",         "%c", c);
 	TEST("char minuscula",      "%c", 'z');
 	TEST("char numero",         "%c", '0');
 	TEST("char espacio",        "%c", ' ');
 	TEST("char con texto",      "X=%c!", c);
- 
-	/* ---- %s ---- 
+
 	printf("\n--- %%s ---");
 	TEST("string normal",       "%s", str);
 	TEST("string nulo",         "%s", null_str);
 	TEST("string vacio",        "%s", "");
 	TEST("string largo",        "%s", "abcdefghijklmnopqrstuvwxyz");
 	TEST("string con texto",    "Di: %s!", str);
- 
-	/* ---- %d / %i ---- 
+
 	printf("\n--- %%d y %%i ---");
 	TEST("d positivo",          "%d", i_pos);
 	TEST("d negativo",          "%d", i_neg);
@@ -83,15 +80,13 @@ int	main(void)
 	TEST("i INT_MAX",           "%i", i_max);
 	TEST("d -1",                "%d", -1);
 	TEST("d 1",                 "%d", 1);
- 
-	/* ---- %u ---- 
+
 	printf("\n--- %%u ---");
 	TEST("u cero",              "%u", u_zero);
 	TEST("u uno",               "%u", u_one);
 	TEST("u UINT_MAX",          "%u", u_max);
 	TEST("u valor medio",       "%u", 2147483648u);
- 
-	/* ---- %x / %X ---- 
+
 	printf("\n--- %%x y %%X ---");
 	TEST("x cero",              "%x", x_zero);
 	TEST("x valor",             "%x", x_val);
@@ -103,20 +98,17 @@ int	main(void)
 	TEST("x 15 (f)",            "%x", 15u);
 	TEST("x 16 (10)",           "%x", 16u);
 	TEST("x 255 (ff)",          "%x", 255u);
- 
-	/* ---- %p ---- 
+
 	printf("\n--- %%p ---");
 	TEST("p puntero valido",    "%p", ptr);
-	TEST("p puntero nulo",      "%p", null_ptr);   /* printf: (nil) | ft_printf: 0x0 */
+	TEST("p puntero nulo",      "%p", null_ptr);
 	TEST("p otro puntero",      "%p", (void *)&i_pos);
- 
-	/* ---- %% ---- 
+
 	printf("\n--- %%%% ---");
 	TEST("porcentaje solo",     "%%");
 	TEST("porcentaje con texto","100%%");
 	TEST("dos porcentajes",     "%%%%");
- 
-	/* ---- Mezclas / combinaciones ---- 
+
 	printf("\n--- MEZCLAS ---");
 	TEST("mix basico",
 		"%c %s %d %i %u %x %X %%",
@@ -127,8 +119,7 @@ int	main(void)
 	TEST("todo junto",
 		"c=%c s=%s d=%d i=%i u=%u x=%x X=%X %%",
 		'B', "test", -1, 42, u_max, 0xDEADu, 0xCAFEu);
- 
-	/* ---- Casos borde / edge ---- 
+
 	printf("\n--- EDGE CASES ---");
 	TEST("solo char",           "%c", 'A');
 	TEST("solo porcentaje",     "%%");
@@ -136,11 +127,11 @@ int	main(void)
 	TEST("hex de 1",            "%x", 1u);
 	TEST("hex de 0xF",          "%x", 0xFu);
 	TEST("hex de 0x10",         "%x", 0x10u);
- 
+
 	printf("\n==============================\n");
 	printf("   FIN DE PRUEBAS\n");
 	printf("==============================\n\n");
- 
+
 	return (0);
 }
 	*/
