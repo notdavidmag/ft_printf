@@ -26,4 +26,6 @@ int	ft_putnbr(int n);
 int	ft_putunsigned(unsigned int n);
 int	ft_putexa(unsigned int n, char c);
 int	ft_putptr(unsigned long n);
+int	handle_number(char c, va_list *args);
+
 #endif
